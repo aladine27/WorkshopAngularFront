@@ -1,0 +1,22 @@
+<!-- modify-bloc.component.html -->
+<form (ngSubmit)="saveModification()">
+    <div>
+        <label for="nomBloc">Nom du Bloc:</label>
+        <input type="text" name="nomBloc" id="nomBloc" [(ngModel)]="bloc.nomBloc" required>
+    </div>
+
+    <div>
+        <label for="capacityBloc">Capacité du Bloc:</label>
+        <input type="number" name="capacityBloc" id="capacityBloc" [(ngModel)]="bloc.capacityBloc" required>
+    </div>
+
+    <div>
+        <label for="foyerId">Foyer:</label>
+        <select name="foyerId" id="foyerId" [(ngModel)]="bloc.foyer && bloc.foyer.idFoyer" required>
+            <!-- Options ici -->
+            <option *ngFor="let foyer of foyers" [value]="foyer.idFoyer">{{ foyer.nomFoyer }}</option>
+        </select>
+    </div>
+
+    <form (ngSubmit)="saveModification()"></form>
+</form>

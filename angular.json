@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            
             "outputPath": "dist/frontbloc",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -63,7 +64,8 @@
               "browserTarget": "Frontbloc:build:production"
             },
             "development": {
-              "browserTarget": "Frontbloc:build:development"
+              "browserTarget": "Frontbloc:build:development",
+              "proxyConfig": "src/proxy.conf.json" 
             }
           },
           "defaultConfiguration": "development"
@@ -94,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
